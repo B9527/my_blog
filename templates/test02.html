@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>JS教程:鼠标悬停时显示文字或显示图片</title>
+<script language="javascript">
+function showPic(sUrl){
+var x,y;
+x = event.clientX;
+y = event.clientY;
+document.getElementById("Layer1").style.left = x;
+document.getElementById("Layer1").style.top = y;
+document.getElementById("Layer1").innerHTML = "<img src=\"" + sUrl + "\">";
+document.getElementById("Layer1").style.display = "block";
+}
+function hiddenPic(){
+document.getElementById("Layer1").innerHTML = "";
+document.getElementById("Layer1").style.display = "none";
+}
+</script>
+</head>
+<body>
+<div id="Layer1" style="display:none;position:absolute;z-index:1;"></div>
+<img src="#########" onmouseout="hiddenPic();" onmousemove="showPic(this.src);" title="wowowowo" />    //此行title实现悬停时显示文字onmousemove实现显示图片
+<p></p>
+</body>
+</html>

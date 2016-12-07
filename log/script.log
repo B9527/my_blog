@@ -1,0 +1,879 @@
+2016-11-27 20:57:24,019 [Thread-16:37480] [django.request:170] [base:get_response] [WARNING]- Not Found: /portal.php
+2016-11-27 21:10:53,632 [Thread-2:46696] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\work_space\my_blog\my_blog_project\blog\views.py", line 27, in index
+    return render(request, "index.html", locals())
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\template\base.py", line 339, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\template\base.py", line 395, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s'" % command)
+TemplateSyntaxError: Invalid block tag: 'SITE_NAME'
+2016-11-28 00:24:52,009 [Thread-2:43712] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\work_space\my_blog\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\work_space\my_blog\my_blog_project\blog\views.py", line 27, in index
+    print(e)
+IOError: [Errno 22] Invalid argument
+2016-11-29 09:16:10,408 [Thread-24:5420] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-11-29 09:16:10,413 [Thread-25:5212] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-11-29 09:16:15,717 [Thread-26:5432] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\python27\lib\site-packages\django\contrib\admin\sites.py", line 229, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "c:\python27\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "c:\python27\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "c:\python27\lib\site-packages\django\contrib\admin\sites.py", line 200, in inner
+    if not self.has_permission(request):
+  File "c:\python27\lib\site-packages\django\contrib\admin\sites.py", line 174, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "c:\python27\lib\site-packages\django\utils\functional.py", line 234, in inner
+    self._setup()
+  File "c:\python27\lib\site-packages\django\utils\functional.py", line 380, in _setup
+    self._wrapped = self._setupfunc()
+  File "c:\python27\lib\site-packages\django\contrib\auth\middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "c:\python27\lib\site-packages\django\contrib\auth\middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "c:\python27\lib\site-packages\django\contrib\auth\__init__.py", line 180, in get_user
+    user_id = _get_user_session_key(request)
+  File "c:\python27\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "c:\python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 57, in __getitem__
+    return self._session[key]
+  File "c:\python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 207, in _get_session
+    self._session_cache = self.load()
+  File "c:\python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 35, in load
+    expire_date__gt=timezone.now()
+  File "c:\python27\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\python27\lib\site-packages\django\db\models\query.py", line 379, in get
+    num = len(clone)
+  File "c:\python27\lib\site-packages\django\db\models\query.py", line 238, in __len__
+    self._fetch_all()
+  File "c:\python27\lib\site-packages\django\db\models\query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "c:\python27\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "c:\python27\lib\site-packages\django\db\models\sql\compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "c:\python27\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "c:\python27\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "c:\python27\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "c:\python27\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "c:\python27\lib\site-packages\django\db\backends\mysql\base.py", line 110, in execute
+    return self.cursor.execute(query, args)
+  File "c:\python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "c:\python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'blogdb.django_session' doesn't exist")
+2016-11-29 09:20:04,421 [Thread-44:3256] [django.request:152] [base:get_response] [WARNING]- Not Found: /uploads/kindeditor/2016/11/f4ebb85e-b5d1-11e6-8961-005056c00008.jpg
+2016-11-29 11:58:40,426 [Thread-25:5848] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-11-29 11:58:40,433 [Thread-26:3748] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-11-29 11:58:52,884 [Thread-28:5336] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\my_blog_project\blog\views.py", line 29, in index
+    return render(request, "index.html", locals())
+  File "c:\python27\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "c:\python27\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "c:\python27\lib\site-packages\django\template\base.py", line 208, in render
+    return self._render(context)
+  File "c:\python27\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "c:\python27\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "c:\python27\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "c:\python27\lib\site-packages\django\template\loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "c:\python27\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "c:\python27\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "c:\python27\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "c:\python27\lib\site-packages\django\template\loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "c:\python27\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "c:\python27\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "c:\python27\lib\site-packages\django\template\loader_tags.py", line 201, in render
+    template = context.template.engine.get_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "c:\python27\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "c:\python27\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "c:\python27\lib\site-packages\django\template\base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "c:\python27\lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "c:\python27\lib\site-packages\django\template\base.py", line 574, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+TemplateSyntaxError: Invalid block tag on line 4: 'static'. Did you forget to register or load this tag?
+2016-11-29 12:17:49,276 [Thread-25:1068] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/
+2016-11-29 12:18:19,203 [Thread-3:3140] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/static/images/a2.jpg
+2016-11-29 12:18:19,220 [Thread-4:3732] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/static/images/a3.jpg
+2016-11-29 12:18:19,220 [Thread-5:5424] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/static/images/a4.jpg
+2016-11-29 12:28:40,832 [Thread-6:4140] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/static/images/a2.jpg
+2016-11-29 12:28:40,849 [Thread-7:444] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/static/images/a3.jpg
+2016-11-29 12:28:40,849 [Thread-8:5856] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/static/images/a4.jpg
+2016-11-29 12:29:28,697 [Thread-3:2124] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 12:29:28,700 [Thread-4:3056] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 12:29:28,707 [Thread-5:4108] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 12:29:28,707 [Thread-6:2456] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 12:29:28,723 [Thread-7:5520] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 12:29:28,723 [Thread-8:5276] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 12:29:28,742 [Thread-9:4912] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 12:31:49,769 [Thread-17:5324] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 12:31:49,798 [Thread-18:4748] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 12:41:02,289 [Thread-12:6048] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/static/css/ad.css
+2016-11-29 12:41:02,338 [Thread-14:4752] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 12:41:02,338 [Thread-15:5840] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 12:42:32,862 [Thread-20:1088] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 12:42:32,862 [Thread-21:928] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 12:42:32,862 [Thread-22:5504] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/static/css/ad.css
+2016-11-29 12:42:32,990 [Thread-27:5420] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 12:42:32,990 [Thread-28:4748] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 12:42:34,243 [Thread-32:4356] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/static/css/ad.css
+2016-11-29 12:42:34,279 [Thread-33:4180] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 12:42:34,283 [Thread-35:4368] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 12:42:35,367 [Thread-42:3228] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/static/css/ad.css
+2016-11-29 12:42:35,391 [Thread-44:4056] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 12:42:35,438 [Thread-45:5292] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 12:42:36,371 [Thread-52:5904] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/static/css/ad.css
+2016-11-29 12:42:36,388 [Thread-54:232] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 12:42:36,391 [Thread-55:5244] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 12:44:01,059 [Thread-64:1860] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 12:44:01,059 [Thread-65:2664] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 12:44:01,076 [Thread-66:4064] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 12:44:01,092 [Thread-67:3500] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 12:44:01,128 [Thread-68:4556] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 12:44:01,131 [Thread-69:5724] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 12:44:01,150 [Thread-70:3832] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:36:06,884 [Thread-2:4460] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /ad/
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\my_blog_project\blog\views.py", line 33, in ad
+    return render(request, "my_test.html", locals())
+  File "c:\python27\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "c:\python27\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "c:\python27\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "c:\python27\lib\site-packages\django\template\base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "c:\python27\lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "c:\python27\lib\site-packages\django\template\base.py", line 574, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+TemplateSyntaxError: Invalid block tag on line 59: 'static'. Did you forget to register or load this tag?
+2016-11-29 13:36:44,335 [Thread-4:5964] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:36:44,372 [Thread-5:3056] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:36:44,378 [Thread-6:5588] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:36:44,381 [Thread-7:4612] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:36:44,388 [Thread-8:2664] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:36:44,392 [Thread-9:5988] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:36:44,403 [Thread-11:4856] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:37:07,299 [Thread-14:660] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:37:07,299 [Thread-15:5408] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:37:07,319 [Thread-16:4380] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:37:07,348 [Thread-17:6108] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:37:07,349 [Thread-18:4488] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:37:07,349 [Thread-19:4184] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:37:07,355 [Thread-21:1112] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:37:08,584 [Thread-23:5756] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:37:08,667 [Thread-24:2268] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:37:08,696 [Thread-25:2532] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:37:08,696 [Thread-26:1532] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:37:08,696 [Thread-27:6020] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:37:08,696 [Thread-28:6000] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:37:08,711 [Thread-30:2216] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:37:09,671 [Thread-32:3760] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:37:09,687 [Thread-33:5876] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:37:09,737 [Thread-34:5704] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:37:09,753 [Thread-35:3648] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:37:09,789 [Thread-36:4432] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:37:09,789 [Thread-37:2064] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:37:09,806 [Thread-39:5412] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:37:11,732 [Thread-41:4904] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:37:11,993 [Thread-42:4276] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:37:12,056 [Thread-44:1428] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:37:12,072 [Thread-43:3192] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:37:12,089 [Thread-45:2628] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:37:12,111 [Thread-46:2124] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:37:12,135 [Thread-48:3232] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:37:13,036 [Thread-50:4144] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:37:13,053 [Thread-51:5188] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:37:13,088 [Thread-52:4748] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:37:13,167 [Thread-53:3408] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:37:13,173 [Thread-54:5960] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:37:13,183 [Thread-55:5492] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:37:13,224 [Thread-57:5924] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:39:52,234 [Thread-60:5800] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:39:52,234 [Thread-61:1528] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:39:52,302 [Thread-62:6060] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:39:52,302 [Thread-63:5460] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:39:52,302 [Thread-64:5948] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:39:52,318 [Thread-65:4056] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:39:52,318 [Thread-66:5916] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:39:53,773 [Thread-68:812] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:39:53,806 [Thread-69:1224] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:39:53,822 [Thread-70:3392] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:39:53,858 [Thread-71:3724] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:39:53,888 [Thread-72:5872] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:39:53,921 [Thread-73:1708] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:39:53,921 [Thread-74:3324] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:41:06,851 [Thread-76:5936] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:41:06,890 [Thread-77:3056] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:41:06,903 [Thread-78:5588] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:41:06,930 [Thread-79:4612] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:41:07,022 [Thread-80:2664] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:41:07,039 [Thread-81:5988] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:41:07,081 [Thread-83:5172] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:41:11,523 [Thread-85:5288] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:41:11,523 [Thread-86:2716] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:41:11,539 [Thread-87:1476] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:41:11,546 [Thread-88:2340] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:41:11,556 [Thread-89:1948] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:41:11,565 [Thread-90:3880] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:41:11,608 [Thread-92:5496] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:41:30,976 [Thread-3:4748] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:41:31,042 [Thread-4:4980] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:41:31,134 [Thread-5:3408] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:41:31,150 [Thread-6:5960] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:41:31,173 [Thread-7:5492] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:41:31,173 [Thread-9:4404] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:41:31,200 [Thread-10:3196] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:42:35,903 [Thread-13:1820] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:42:35,927 [Thread-14:4368] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:42:35,940 [Thread-15:6024] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:42:36,013 [Thread-16:4300] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:42:36,016 [Thread-17:1068] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:42:36,016 [Thread-18:1200] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:42:36,016 [Thread-20:1212] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:42:37,905 [Thread-22:2568] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:42:38,098 [Thread-24:3112] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:42:38,098 [Thread-23:1576] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:42:38,115 [Thread-25:1704] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:42:38,118 [Thread-26:5816] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:42:38,134 [Thread-27:5428] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:42:38,186 [Thread-29:832] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:42:50,134 [Thread-31:5944] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:42:50,151 [Thread-32:4792] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:42:50,200 [Thread-33:4324] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:42:50,200 [Thread-34:2492] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:42:50,200 [Thread-35:6068] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:42:50,200 [Thread-36:4708] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:42:50,219 [Thread-38:5452] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:42:51,101 [Thread-40:1980] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:42:51,150 [Thread-41:6048] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:42:51,150 [Thread-42:2756] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:42:51,183 [Thread-44:3588] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:42:51,207 [Thread-45:5640] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:42:51,221 [Thread-46:5244] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:42:51,221 [Thread-47:4960] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:43:58,838 [Thread-51:928] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:43:58,871 [Thread-52:600] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:43:58,871 [Thread-53:5236] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:43:58,871 [Thread-54:6032] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:43:58,871 [Thread-55:4144] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:43:58,871 [Thread-56:4652] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:43:58,888 [Thread-57:5168] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:44:00,598 [Thread-61:5348] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:44:00,703 [Thread-62:1560] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:44:00,703 [Thread-63:3948] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:44:00,719 [Thread-64:4460] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:44:00,719 [Thread-65:444] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:44:00,736 [Thread-66:3840] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:44:00,825 [Thread-67:2316] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:44:36,895 [Thread-4:6000] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:44:36,911 [Thread-5:2216] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:44:36,964 [Thread-6:5756] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:44:37,066 [Thread-7:5564] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:44:37,082 [Thread-8:5584] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:44:37,117 [Thread-9:272] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:44:37,117 [Thread-11:4260] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:44:38,056 [Thread-15:4884] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:44:38,086 [Thread-16:1860] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:44:38,095 [Thread-17:2456] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:44:38,109 [Thread-18:4076] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:44:38,109 [Thread-19:5496] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:44:38,109 [Thread-20:2232] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:44:38,132 [Thread-21:6108] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:45:19,173 [Thread-25:5084] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:45:19,206 [Thread-26:5288] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:45:19,269 [Thread-27:6132] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:45:19,269 [Thread-28:1948] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:45:19,289 [Thread-29:2340] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:45:19,289 [Thread-30:3424] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:45:19,289 [Thread-32:5876] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:45:20,361 [Thread-35:3392] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:45:20,367 [Thread-36:5764] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:45:20,415 [Thread-37:4356] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:45:20,428 [Thread-38:4184] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:45:20,430 [Thread-39:3684] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:45:20,433 [Thread-40:4488] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:45:20,450 [Thread-42:5188] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:47:05,553 [Thread-46:4180] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:47:05,571 [Thread-47:5348] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:47:05,571 [Thread-48:1560] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:47:05,571 [Thread-49:3948] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:47:05,596 [Thread-50:4460] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:47:05,598 [Thread-51:444] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:47:05,619 [Thread-52:3840] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:47:06,746 [Thread-56:5684] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:47:06,762 [Thread-57:5296] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:47:06,786 [Thread-58:5484] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:47:06,789 [Thread-59:5692] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:47:06,793 [Thread-60:1968] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:47:06,796 [Thread-61:4596] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:47:06,815 [Thread-62:5560] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:47:30,341 [Thread-67:4800] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:47:30,357 [Thread-68:364] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:47:30,424 [Thread-69:5376] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:47:30,424 [Thread-70:5112] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:47:30,446 [Thread-71:5940] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:47:30,446 [Thread-72:3700] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:47:30,447 [Thread-73:6064] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:47:31,454 [Thread-76:5268] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:47:31,503 [Thread-77:5680] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:47:31,503 [Thread-78:3472] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:47:31,503 [Thread-79:5328] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:47:31,503 [Thread-80:5884] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:47:31,519 [Thread-82:3696] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:47:31,519 [Thread-83:1552] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:47:41,734 [Thread-87:6112] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:47:41,750 [Thread-88:2712] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:47:41,750 [Thread-89:4276] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:47:41,773 [Thread-90:6024] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:47:41,799 [Thread-91:4064] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:47:41,799 [Thread-92:2568] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:47:41,799 [Thread-93:3232] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:47:53,346 [Thread-98:4404] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:47:53,362 [Thread-99:4368] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:47:53,404 [Thread-100:2268] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:47:53,423 [Thread-101:1532] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:47:53,440 [Thread-102:6000] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:47:53,440 [Thread-103:2216] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:47:53,440 [Thread-104:2716] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:47:53,490 [Thread-105:5756] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:47:53,523 [Thread-106:5564] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:47:56,153 [Thread-110:4824] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:47:56,168 [Thread-111:3880] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:47:56,194 [Thread-112:5784] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:47:56,197 [Thread-113:5204] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:47:56,198 [Thread-114:4884] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:47:56,210 [Thread-115:1860] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:47:56,230 [Thread-116:2456] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 13:48:06,924 [Thread-121:6136] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 13:48:06,990 [Thread-122:2652] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 13:48:06,990 [Thread-123:4380] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 13:48:07,006 [Thread-124:5164] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 13:48:07,006 [Thread-125:5284] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 13:48:07,025 [Thread-126:1744] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 13:48:07,025 [Thread-127:4480] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 18:23:35,881 [Thread-1:14664] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /test/
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\my_blog_project\blog\views.py", line 37, in test
+    return render(request, "test02.html",locals())
+  File "c:\python27\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "c:\python27\lib\site-packages\django\template\loaders\base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "c:\python27\lib\site-packages\django\template\loaders\filesystem.py", line 25, in get_contents
+    return fp.read()
+  File "E:\my_space\my_env01\lib\codecs.py", line 314, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xbd in position 97: invalid start byte
+2016-11-29 18:23:50,111 [Thread-7:14952] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /test/
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\my_blog_project\blog\views.py", line 37, in test
+    return render(request, "test02.html",locals())
+  File "c:\python27\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "c:\python27\lib\site-packages\django\template\loaders\base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "c:\python27\lib\site-packages\django\template\loaders\filesystem.py", line 25, in get_contents
+    return fp.read()
+  File "E:\my_space\my_env01\lib\codecs.py", line 314, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xbd in position 97: invalid start byte
+2016-11-29 18:24:37,549 [Thread-1:7248] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /test/
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\my_blog_project\blog\views.py", line 37, in test
+    return render(request, "test02.html", locals())
+  File "c:\python27\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "c:\python27\lib\site-packages\django\template\loaders\base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "c:\python27\lib\site-packages\django\template\loaders\filesystem.py", line 25, in get_contents
+    return fp.read()
+  File "E:\my_space\my_env01\lib\codecs.py", line 314, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xbd in position 97: invalid start byte
+2016-11-29 18:24:38,821 [Thread-3:14972] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /test/
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\my_blog_project\blog\views.py", line 37, in test
+    return render(request, "test02.html", locals())
+  File "c:\python27\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "c:\python27\lib\site-packages\django\template\loaders\base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "c:\python27\lib\site-packages\django\template\loaders\filesystem.py", line 25, in get_contents
+    return fp.read()
+  File "E:\my_space\my_env01\lib\codecs.py", line 314, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xbd in position 97: invalid start byte
+2016-11-29 18:24:43,444 [Thread-4:14508] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /test/
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\my_blog_project\blog\views.py", line 37, in test
+    return render(request, "test02.html", locals())
+  File "c:\python27\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "c:\python27\lib\site-packages\django\template\loaders\base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "c:\python27\lib\site-packages\django\template\loaders\filesystem.py", line 25, in get_contents
+    return fp.read()
+  File "E:\my_space\my_env01\lib\codecs.py", line 314, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xbd in position 97: invalid start byte
+2016-11-29 18:25:31,881 [Thread-7:14100] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 18:25:31,924 [Thread-8:15100] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 18:25:31,927 [Thread-9:11544] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 18:25:31,930 [Thread-10:12648] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 18:25:31,937 [Thread-11:13748] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 18:25:31,944 [Thread-12:13544] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 18:25:31,954 [Thread-13:14228] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-11-29 18:25:37,121 [Thread-16:14476] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /test/
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "c:\python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\my_blog_project\blog\views.py", line 37, in test
+    return render(request, "test02.html", locals())
+  File "c:\python27\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "c:\python27\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "c:\python27\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "c:\python27\lib\site-packages\django\template\loaders\base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "c:\python27\lib\site-packages\django\template\loaders\filesystem.py", line 25, in get_contents
+    return fp.read()
+  File "E:\my_space\my_env01\lib\codecs.py", line 314, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xbd in position 97: invalid start byte
+2016-11-29 18:25:38,898 [Thread-17:14524] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test1.jpg
+2016-11-29 18:25:39,193 [Thread-18:15152] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test2.jpg
+2016-11-29 18:25:39,197 [Thread-19:13376] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test3.jpg
+2016-11-29 18:25:39,204 [Thread-21:14564] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test5.jpg
+2016-11-29 18:25:39,209 [Thread-22:15140] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/prev.png
+2016-11-29 18:25:39,216 [Thread-20:14428] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/test4.jpg
+2016-11-29 18:25:39,216 [Thread-23:14804] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad/img/next.png
+2016-12-06 16:57:30,780 [Thread-22:5604] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-12-07 09:35:05,684 [Thread-3:3816] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-12-07 09:35:35,631 [Thread-8:4360] [django.request:170] [base:get_response] [WARNING]- Not Found: /b.html
+2016-12-07 09:36:44,109 [Thread-9:2564] [django.request:170] [base:get_response] [WARNING]- Not Found: /c.html
+2016-12-07 09:37:30,160 [Thread-16:232] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\contrib\admin\sites.py", line 394, in login
+    return login(request, **defaults)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\contrib\auth\views.py", line 44, in login
+    if form.is_valid():
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\forms\forms.py", line 184, in is_valid
+    return self.is_bound and not self.errors
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\forms\forms.py", line 176, in errors
+    self.full_clean()
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\forms\forms.py", line 393, in full_clean
+    self._clean_form()
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\forms\forms.py", line 417, in _clean_form
+    cleaned_data = self.clean()
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\contrib\auth\forms.py", line 157, in clean
+    password=password)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\contrib\auth\__init__.py", line 74, in authenticate
+    user = backend.authenticate(**credentials)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\contrib\auth\backends.py", line 17, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\contrib\auth\models.py", line 162, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    sql, params = self.as_sql()
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\models\sql\compiler.py", line 378, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\models\sql\compiler.py", line 48, in pre_sql_setup
+    self.setup_query()
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\models\sql\compiler.py", line 39, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\models\sql\compiler.py", line 219, in get_select
+    ret.append((col, self.compile(col, select_format=True), alias))
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\models\sql\compiler.py", line 357, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\models\expressions.py", line 611, in as_sql
+    return "%s.%s" % (qn(self.alias), qn(self.target.column)), []
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\models\sql\compiler.py", line 348, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\db\backends\dummy\base.py", line 21, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+2016-12-07 10:39:58,693 [Thread-46:6064] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\my_blog_project\blog\views.py", line 35, in index
+    return render(request, "index.html", locals())
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = list(values)
+TypeError: 'ManyRelatedManager' object is not iterable
+2016-12-07 10:40:21,253 [Thread-48:5136] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\my_blog_project\blog\views.py", line 35, in index
+    return render(request, "index.html", locals())
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = list(values)
+TypeError: 'ManyRelatedManager' object is not iterable
+2016-12-07 10:48:05,009 [Thread-4:3568] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\my_blog_project\blog\views.py", line 33, in index
+    return render(request, "index.html", locals())
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 317, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 423, in compile_filter
+    return FilterExpression(token, self)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 639, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '-m-d' from 'article.date_publish |date:Y-m-d'
+2016-12-07 10:48:32,164 [Thread-6:5692] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\my_blog_project\blog\views.py", line 33, in index
+    return render(request, "index.html", locals())
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 317, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 423, in compile_filter
+    return FilterExpression(token, self)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 639, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '-m-d' from 'article.date_publish|date:Y-m-d'
