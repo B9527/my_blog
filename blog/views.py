@@ -5,6 +5,7 @@ import logging
 from django.conf import settings
 from .models import *
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
+
 # Create your views here.
 
 
@@ -26,18 +27,40 @@ def index(request):
     try:
         # 分类信息
         category_list = Category.objects.all()[:6]
+        # 文章信息
         article_list = Article.objects.all()
+        # 分页处理
         paginator = Paginator(article_list, 3)
         try:
             page = int(request.GET.get('page', 1))
             article_list = paginator.page(page)
         except (EmptyPage, InvalidPage, PageNotAnInteger):
             article_list = paginator.page(1)
-
+        # 文章归档
+        archive_list = Article.objects.distinct_date()
     except Exception as e:
         print(e)
         logger.error(e)
     return render(request, "index.html", locals())
 
 
-
+def archive(request):
+    try:
+        category_list = Category.objects.all()[:6]
+        # 先获取客户信息
+        year = request.GET.get('year', None)
+        mouth = request.GET.get('mouth', None)
+        # 文章信息
+        article_list = Article.objects.filter(date_publish__icontains=year+'-'+mouth)
+        # 分页处理
+        paginator = Paginator(article_list, 3)
+        try:
+            page = int(request.GET.get('page', 1))
+            article_list = paginator.page(page)
+        except (EmptyPage, InvalidPage, PageNotAnInteger):
+            article_list = paginator.page(1)
+        # 文章归档
+        archive_list = Article.objects.distinct_date()
+    except Exception as e:
+        logger.error(e)
+    return render(request, "archive.html", locals())
