@@ -1,8 +1,10 @@
+# coding:utf-8
 # Create your views here.
 from django.shortcuts import render
 import logging
 from django.conf import settings
 from .models import *
+from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
 # Create your views here.
 
 
@@ -21,11 +23,16 @@ def global_setting(request):
 
 
 def index(request):
-    tag_list = []
     try:
+        # 分类信息
+        category_list = Category.objects.all()[:6]
         article_list = Article.objects.all()
-        for article in article_list:
-            tag_list = article.tag.all()
+        paginator = Paginator(article_list, 3)
+        try:
+            page = int(request.GET.get('page', 1))
+            article_list = paginator.page(page)
+        except (EmptyPage, InvalidPage, PageNotAnInteger):
+            article_list = paginator.page(1)
 
     except Exception as e:
         print(e)
@@ -33,9 +40,4 @@ def index(request):
     return render(request, "index.html", locals())
 
 
-def ad(request):
-    return render(request, "my_test.html", locals())
 
-
-def test(request):
-    return render(request, "local_index.html", locals())

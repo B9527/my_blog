@@ -877,3 +877,150 @@ Traceback (most recent call last):
   File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 639, in __init__
     "from '%s'" % (token[upto:], token))
 TemplateSyntaxError: Could not parse the remainder: '-m-d' from 'article.date_publish|date:Y-m-d'
+2016-12-08 15:54:10,575 [Thread-13:9308] [django.request:170] [base:get_response] [WARNING]- Not Found: /news.html
+2016-12-08 15:54:12,187 [Thread-14:10176] [django.request:170] [base:get_response] [WARNING]- Not Found: /news.html
+2016-12-08 15:57:15,000 [Thread-2:9300] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\my_space\git_blog\my_blog\my_blog_project\urls.py", line 28, in <module>
+    url(r'^ad/$', ad, name="ad"),
+NameError: name 'ad' is not defined
+2016-12-08 15:57:18,476 [Thread-3:8328] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\my_space\git_blog\my_blog\my_blog_project\urls.py", line 28, in <module>
+    url(r'^ad/$', ad, name="ad"),
+NameError: name 'ad' is not defined
+2016-12-08 15:57:40,887 [Thread-6:9904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\git_blog\my_blog\blog\views.py", line 29, in index
+    return render(request, "index.html", locals())
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = list(values)
+TypeError: 'ManyRelatedManager' object is not iterable
+2016-12-08 15:57:42,135 [Thread-7:8384] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_space\git_blog\my_blog\blog\views.py", line 29, in index
+    return render(request, "index.html", locals())
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = list(values)
+TypeError: 'ManyRelatedManager' object is not iterable
+2016-12-08 16:03:41,821 [Thread-2:9872] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\my_space\git_blog\my_blog\my_blog_project\urls.py", line 18, in <module>
+    from blog.views import *
+  File "E:\my_space\git_blog\my_blog\blog\views.py", line 26
+SyntaxError: Non-ASCII character '\xe5' in file E:\my_space\git_blog\my_blog\blog\views.py on line 26, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-12-08 16:04:02,770 [Thread-3:7856] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 223, in get_response
+    response = middleware_method(request, response)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\middleware\clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options', None) is not None:
+AttributeError: 'Page' object has no attribute 'get'
+2016-12-08 16:04:03,852 [Thread-4:8432] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 223, in get_response
+    response = middleware_method(request, response)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\middleware\clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options', None) is not None:
+AttributeError: 'Page' object has no attribute 'get'
+2016-12-08 16:04:06,276 [Thread-5:9288] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\core\handlers\base.py", line 223, in get_response
+    response = middleware_method(request, response)
+  File "E:\my_space\my_blog_venv01\lib\site-packages\django\middleware\clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options', None) is not None:
+AttributeError: 'Page' object has no attribute 'get'
