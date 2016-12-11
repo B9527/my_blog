@@ -12,7 +12,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('title', 'desc', 'content', 'user', 'category', 'tag', )
+            'fields': ('title', 'desc', 'content', 'user', 'category', 'tag',)
         }),
         ('高级设置', {
             'classes': ('collapse',),

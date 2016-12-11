@@ -49,9 +49,10 @@ def archive(request):
         category_list = Category.objects.all()[:6]
         # 先获取客户信息
         year = request.GET.get('year', None)
-        mouth = request.GET.get('mouth', None)
+        month = request.GET.get('month', None)
         # 文章信息
-        article_list = Article.objects.filter(date_publish__icontains=year+'-'+mouth)
+        article_list = Article.objects.filter(date_publish__icontains=year + '-' + month)
+
         # 分页处理
         paginator = Paginator(article_list, 3)
         try:

@@ -133,11 +133,11 @@ window.onload = function ()
     <div class="tuwen">
       <h3>文章归档</h3>
       <ul>
-          {% for archive in archive_list %}
+        {% for archive in archive_list %}
         <li>
-           <p><span class="tutime font-size-18"><a href='{% url 'archive' %}?year={{ archive | slice:":4" }}&month={{ archive | slice:"5:7" }}'>{{ archive }}</a></span></p>
+          <p><span class="tutime font-size-18"><a href='{% url 'archive' %}?year={{ archive | slice:":4" }}&month={{ archive | slice:"5:7" }}'>{{ archive }}</a></span></p>
         </li>
-          {% endfor %}
+        {% endfor %}
       </ul>
     </div>
     <div class="links">
