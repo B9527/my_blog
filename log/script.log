@@ -1,0 +1,348 @@
+2016-12-19 14:51:31,440 [Thread-8:5396] [django.request:170] [base:get_response] [WARNING]- Not Found: /archive/base.html
+2016-12-19 14:51:33,174 [Thread-9:5908] [django.request:170] [base:get_response] [WARNING]- Not Found: /archive/base.html
+2016-12-19 16:23:46,683 [Thread-2:6072] [django.request:170] [base:get_response] [WARNING]- Not Found: /
+2016-12-19 16:23:58,160 [Thread-2:5376] [django.request:170] [base:get_response] [WARNING]- Not Found: /
+2016-12-19 16:24:01,309 [Thread-3:2620] [django.request:170] [base:get_response] [WARNING]- Not Found: /
+2016-12-19 16:28:55,986 [Thread-3:5428] [django.request:170] [base:get_response] [WARNING]- Not Found: /new_logis/
+2016-12-19 16:51:48,762 [Thread-2:5904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_work\myself_local\my_blog\blog\views.py", line 44, in index
+    return render(request, "index.html", locals())
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader_tags.py", line 113, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader_tags.py", line 110, in get_parent
+    return context.template.engine.get_template(parent)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 315, in parse
+    self.empty_variable(token)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 386, in empty_variable
+    raise self.error(token, "Empty variable tag")
+TemplateSyntaxError: Empty variable tag
+2016-12-19 16:52:06,075 [Thread-4:5660] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_work\myself_local\my_blog\blog\views.py", line 44, in index
+    return render(request, "index.html", locals())
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'tag' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2016-12-19 16:52:07,344 [Thread-5:5456] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_work\myself_local\my_blog\blog\views.py", line 44, in index
+    return render(request, "index.html", locals())
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'tag' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2016-12-19 16:52:36,759 [Thread-6:3752] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_work\myself_local\my_blog\blog\views.py", line 44, in index
+    return render(request, "index.html", locals())
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'tag' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2016-12-19 16:52:38,240 [Thread-7:3564] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_work\myself_local\my_blog\blog\views.py", line 44, in index
+    return render(request, "index.html", locals())
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'tag' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2016-12-19 16:53:06,628 [Thread-8:4068] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_work\myself_local\my_blog\blog\views.py", line 44, in index
+    return render(request, "index.html", locals())
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'tag' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2016-12-19 16:53:07,822 [Thread-9:6096] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_work\myself_local\my_blog\blog\views.py", line 44, in index
+    return render(request, "index.html", locals())
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'tag' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2016-12-19 16:58:05,207 [Thread-8:5640] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /archive/
+Traceback (most recent call last):
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\my_work\myself_local\my_blog\blog\views.py", line 59, in archive
+    return render(request, "archive.html", locals())
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loader_tags.py", line 151, in render
+    template = context.template.engine.get_template(template)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\defaulttags.py", line 1014, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\base.py", line 348, in parse
+    self.unclosed_block_tag(parse_until)
+  File "E:\my_work\EVEN\company_webeven01\lib\site-packages\django\template\debug.py", line 65, in unclosed_block_tag
+    raise self.source_error(source, msg)
+TemplateSyntaxError: Unclosed tag 'if'. Looking for one of: elif, else, endif 
+2016-12-23 11:31:54,319 [Thread-26:4216] [django.request:170] [base:get_response] [WARNING]- Not Found: /archive/base.html
+2016-12-23 11:32:01,354 [Thread-27:3516] [django.request:170] [base:get_response] [WARNING]- Not Found: /archive/base.html
+2016-12-23 12:03:57,438 [Thread-2:3280] [django.request:170] [base:get_response] [WARNING]- Not Found: /admin/xiaopingguo/user_info/41/
+2016-12-23 12:03:58,480 [Thread-3:3092] [django.request:170] [base:get_response] [WARNING]- Not Found: /admin/xiaopingguo/user_info/41/
+2016-12-23 12:03:59,270 [Thread-4:3272] [django.request:170] [base:get_response] [WARNING]- Not Found: /admin/xiaopingguo/user_info/41/
+2016-12-26 09:14:33,910 [Thread-4:3668] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
